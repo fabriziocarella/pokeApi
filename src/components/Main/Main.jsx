@@ -18,6 +18,7 @@ const Main = () => {
   useEffect(
     async () => {
       try {
+        //! CONTINUAR
         let checkExist = foundPokemons.find((pokemon) => {
           return pokemon.id == debounced
         })
