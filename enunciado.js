@@ -62,5 +62,6 @@ Main(Main) {
 Footer(Footer)
 
 //! dependencias
-//npm i react-router-dom
-
+// npm i react-router-dom
+// npm i axios 
+// npm i use-debounce
