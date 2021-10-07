@@ -1,0 +1,68 @@
+.card {    
+    margin-top: 15px;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    box-sizing: border-box;
+    border-radius: 5px;
+    -o-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-color: black 2px;
+    border: solid;
+    text-transform: capitalize;
+}
+.name_id {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.card_name {
+    padding: 5px;
+    font-size: 1.2rem;
+}
+.card_id {
+    padding: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.card_image {
+    width: 100%;
+    background-color: rgb(245, 245, 245, 0.5) ;
+    box-sizing: border-box;
+    border-top: black solid 1px;
+    border-bottom: black solid 1px; 
+}
+.types_abilities {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.card_types {
+    width: 50%;
+    border-right: black solid 1px;;
+}
+.types_title, .abilities_title {
+    padding: 5px 0px;
+    border-bottom: black solid 1px; 
+    font-size: 1.1rem;
+
+}
+
+
+
+
+.card_abilities {
+    width: 50%;
+}
+
+.info {
+    border: none !important;
+    font-size: 1rem;
+}
