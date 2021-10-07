@@ -54,10 +54,6 @@
     font-size: 1.1rem;
 
 }
-
-
-
-
 .card_abilities {
     width: 50%;
 }
@@ -67,4 +63,25 @@
     font-size: 1rem;
     background-color: none !important;
 
+}
+
+// Media Queries
+// TABLET
+@media (min-width: 769px) {
+    .card {
+        width: 45%;
+        margin: 5px;
+    }
+}
+// LAPTOP
+@media (min-width: 1280px) {
+    .card {
+        width: 30%;
+    }
+}
+// MONITOR
+@media (min-width: 1920px) {
+    .card {
+        width: 24%;
+    }
 }
