@@ -43,7 +43,7 @@ const Form = () => {
     }, [debounced])
   return (
     <section className="form">
-      <p>Insert the Pokemon's name or ID to know more about them</p>
+      <p className="form_title">Insert the Pokemon's name or ID to know more about them</p>
       <input type="text" name="pokemon" placeholder="Search a Pokemon!" onChange={handleChange} />
       <PokeList foundPokemons={foundPokemons} />
     </section>

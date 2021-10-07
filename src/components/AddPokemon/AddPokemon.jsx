@@ -44,23 +44,23 @@ const AddPokemon = () => {
     setFoundPokemons([...foundPokemons, newData])
   }
   return (
-    <section>
+    <section className="formContainer">
       {/* Using handleSubmit will validate all inputs before submit them */}
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form className="addPokemon_form" onSubmit={handleSubmit(onSubmit)}>
         {/* Add (or register) your input to the hook with "register" function to be validated on submit */}
-        <label>ID:
+        <label className="labels">ID:
           <input {...register("id", { required: true, minLength: 4 })} />
           {errors.id && "This field is required"}
         </label>
-        <label >Name:
+        <label className="labels">Name:
           <input {...register("name", { required: true, minLength: 3 })} />
           {errors.name && "This field is required"}
         </label>
-        <label >Image:
+        <label className="labels">Image:
           <input {...register("image", { required: true, minLength: 3 })} />
           {errors.image && "This field is required"}
         </label>
-        <label >Type one:
+        <label className="labels">Type one:
           <select {...register("typeOne", { required: true })}>
             <option value="normal">Normal</option>
             <option value="fire">Fire</option>
@@ -83,7 +83,7 @@ const AddPokemon = () => {
             {errors.typeOne && "This field is required"}
           </select>
         </label>
-        <label >Type two:
+        <label className="labels">Type two:
           <select {...register("typeTwo")}>
             <option value="normal">Normal</option>
             <option value="fire">Fire</option>
@@ -105,15 +105,15 @@ const AddPokemon = () => {
             <option value="fairy">Fairy</option>
           </select>
         </label>
-        <label >Ability one:
+        <label className="labels">Ability one:
           <input {...register("abilityOne", { required: true, minLength: 3 })} />
           {errors.abilityOne && "This field is required"}
         </label>
-        <label >Ability two:
+        <label className="labels">Ability two:
           <input {...register("abilityTwo", { required: true, minLength: 3 })} />
           {errors.abilityTwo && "This field is required"}
         </label>
-        <input type="submit" value="Add this new Pokemon!" />
+        <input type="submit" value="Add this new Pokemon!"  className="addPokemon_btn" />
       </form>
     </section>
   );
