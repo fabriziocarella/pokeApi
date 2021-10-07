@@ -46,3 +46,23 @@
     margin-top: 15px;
     height: 28px;
 }
+
+// Media Queries
+// TABLET
+@media (min-width: 769px) {
+    .addPokemon_form {        
+    width: 40%;
+}
+}
+// LAPTOP
+@media (min-width: 1280px) {
+    .addPokemon_form {
+        width: 35%;
+    }
+}
+// MONITOR
+@media (min-width: 1920px) {
+    .addPokemon_form {
+        width: 20%;
+    }
+}
