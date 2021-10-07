@@ -6,8 +6,9 @@ import Nav from "../Nav/Nav";
 
 const Header = () => {
   return (
-    <header>
-      <Nav />
+    <header className="header">
+      <h4>Welcome to PokeFind!</h4>
+      <Nav clase="header--nav"/>
     </header>
   )
 };

@@ -1,0 +1,13 @@
+.nav {
+    background: none;
+    height: 5vh;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+}
+.links > li {
+    list-style: none;
+    // @include centerAllNavFooter
+}

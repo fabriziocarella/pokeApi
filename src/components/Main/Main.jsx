@@ -1,54 +1,20 @@
-import React, { useState, useEffect } from "react";
+// 3rd party components
+import React from "react";
 import { Route, Switch } from 'react-router-dom';
-import { useDebounce } from "use-debounce/lib";
-import axios from "axios";
 
-
-import PokeList from "../PokeList/PokeList";
+// Own components
+import Home from "../Home/Home"
+import Form from "../Form/Form";
 import Error from "../Error/Error";
-
-
+import AddPokemon from "../AddPokemon/AddPokemon";
 
 const Main = () => {
-
-  const [foundPokemons, setFoundPokemons] = useState([])
-  const [input_value, setInput_value] = useState("");
-  const [debounced] = useDebounce(input_value, 2000)
-
-  useEffect(
-    async () => {
-      try {
-        //! CONTINUAR
-        let checkExist = foundPokemons.find((pokemon) => {
-          return pokemon.id == debounced
-        })
-        console.log(debounced);
-
-        if (debounced !== "" && checkExist !== undefined) {
-          const res = await axios.get(`https://pokeapi.co/api/v2/pokemon/${debounced}`)
-          const data = await [res.data]
-          console.log(foundPokemons);
-          setFoundPokemons([...foundPokemons, ...data])
-        } else {
-          // alert(`Please add a valid number or Pokemon name`)
-        }
-      }
-      catch (e) {
-        console.log(e);
-      }
-    }, [debounced])
-
-
-
   return (
-    <main>
-      <section>
-        <form>
-          <input type="text" name="pokemon" placeholder="Search a Pokemon!" onChange={(e) => { setInput_value(e.target.value) }} />
-        </form>
-      </section>
+    <main className="main">
       <Switch>
-        <Route path="/pokedex" component={() => <PokeList foundPokemons={foundPokemons} />} />
+        <Route path="/" component={Home} exact />
+        <Route path="/search" component={Form} />
+        <Route path="/new" component={AddPokemon} />
         <Route component={Error} />
       </Switch>
     </main>)
